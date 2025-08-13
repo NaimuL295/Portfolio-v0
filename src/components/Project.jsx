@@ -31,8 +31,9 @@ export default function Projects() {
                     <img
                       src={image}
                       alt={title}
-                      className="w-full h-64 object-cover rounded-lg shadow-lg"
-                    />
+                  className="w-full h-64 lg:h-72 object-cover rounded-2xl shadow-lg transition-transform hover:scale-105"
+/>
+                    
                   </div>
 
                   <div className="flex-1 max-w-xl">

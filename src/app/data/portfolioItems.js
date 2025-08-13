@@ -2,7 +2,7 @@ export const portfolioItems = [
   {
     id: 1,
     title: "Social-Events-Platform",
-    image: "https://i.ibb.co/bgGn6JKP/Screenshot-2025-08-08-170354.png",
+    image: "https://i.ibb.co/ksmYbbdj/Screenshot-2025-08-13-192129.png",
     description: "A modern event management platform that allows users to create, join, and explore local or online events. Built with a responsive UI and real-time event updates to enhance community engagement.",
     link: "https://social-event.netlify.app/",
     git: "https://github.com/NaimuL295/Social-Events-Platform",
@@ -16,7 +16,7 @@ export const portfolioItems = [
   {
     id: 2,
     title: "Freelance-Task",
-    image: "https://i.ibb.co/LdSb1bsR/Screenshot-2025-08-08-170713.png",
+    image: "https://i.ibb.co/TDxYbFyJ/Screenshot-2025-08-13-192939.png",
     description: "A freelance marketplace that connects clients with freelancers. Features job posting, bidding, and task tracking to ensure smooth collaboration between both parties.",
     link: "https://assignment-10-b11.netlify.app/",
     git: "https://github.com/NaimuL295/Freelance-Task-client-site",
@@ -31,7 +31,7 @@ export const portfolioItems = [
   {
     id: 3,
     title: "Forum-Platform",
-    image: "https://i.ibb.co/R4pkTZhK/Screenshot-2025-08-08-170641.png",
+    image: "https://i.ibb.co/tMT1cnVq/Screenshot-2025-08-13-192729.png",
     description: "A community-driven blogging and discussion platform where users can share articles, comment, and interact within topic-specific categories.",
     link: "https://b11-assigment-12.netlify.app/",
     git: "https://github.com/NaimuL295/Forum-Client--site",

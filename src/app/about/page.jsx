@@ -42,7 +42,7 @@ const skills = [
    <section className="min-h-screen flex items-center justify-center px-6 py-12">
   <div data-aos="fade-up" >
     <div className="max-w-4xl text-center">
-      <h1 className="text-4xl font-bold mb-6">About Me</h1>
+      <h1 className="text-5xl md:text-6xl font-bold">About Me</h1>
 
    <p className="text-lg leading-relaxed mb-6">
   Hello! I’m <span className="font-semibold">Naimul</span>, a passionate Frontend Developer.

@@ -23,7 +23,7 @@ export default function Home() {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h1 className="text-4xl md:text-5xl font-bold">
+          <h1 className="text-5xl md:text-6xl font-bold">
            {"Hi I'm   "}
             <span
               className=""
