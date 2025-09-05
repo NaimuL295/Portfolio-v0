@@ -42,7 +42,7 @@ const skills = [
    <section className="min-h-screen flex items-center justify-center px-6 py-12">
   <div data-aos="fade-up" >
     <div className="max-w-4xl text-center">
-      <h1 className="text-5xl md:text-6xl font-bold">About Me</h1>
+      <h1 className="text-2xl md:text-3xl font-bold">About Me</h1>
 
    <p className="text-lg leading-relaxed mb-6">
   Hello! I’m <span className="font-semibold">Naimul</span>, a passionate Frontend Developer.
@@ -60,7 +60,7 @@ const skills = [
 
    <section className="py-16 px-6">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-12">My Skills</h2>
+        <h2 className="text-2xl font-bold mb-12">My Skills</h2>
 
         <motion.div
           className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-10 max-w-4xl mx-auto mb-12"

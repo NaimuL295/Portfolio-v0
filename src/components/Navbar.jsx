@@ -1,147 +1,104 @@
-// 'use client'
-// import Link from 'next/link'
-// import DownloadCVButton from './ButtonPage'
+
+"use client";
+import { useState } from "react";
+import { Link as ScrollLink } from "react-scroll";
+import DownloadCVButton from "./ButtonPage";
 
 
-// const links = [
-//   {url: "/", title: "Home"},
-//   {url: "/about", title: "About Me"},
-//   {url: "/portfolio", title: "Portflio"},
-//   {url: "/contact", title: "Contact"},
-// ]
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
 
-// const Navbar = () => {
+  const links = [
+    { title: "Home", url: "home" },
+    { title: "About", url: "about" },
+    { title: "Projects", url: "projects" },
+    { title: "Contact", url: "contact" },
+  ];
 
-//   return (
-// <div className="navbar bg-base-100 shadow-sm text-xl">
-//   <div className="navbar-start">
-//     <div className="dropdown">
-//       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-//         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
-//       </div>
-//       <ul
-//         tabIndex={0}
-//         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-//     {links.map((link,index )=>(
-               
-//              <li key={index} >   <Link href={link.url}>{link.title}</Link></li>
-              
-//               ))}
-//       </ul>
-//     </div>
-//     <a className="btn btn-ghost text-xl">daisyUI</a>
-//   </div>
-//   <div className="navbar-center hidden lg:flex">
-//     <ul className="menu menu-horizontal px-1">
-//              {links.map((link,index )=>(
-               
-//              <li key={index} >   
-//              <Link href={link.url}>{link.title}</Link></li>
-              
-               
-//               ))}
-//     </ul>
-//   </div>
-//   <div className="navbar-end">
-//    <DownloadCVButton></DownloadCVButton>
-//   </div>
-// </div>
-//   )
-// }
-
-// export default Navbar
-'use client'
-import { Link } from "react-scroll";
-import DownloadCVButton from './ButtonPage'
-import Image from "next/image";
-
-const links = [
-  { url: "home", title: "Home" },
-  { url: "about", title: "About Me" },
-  { url: "projects", title: "Projects" },
-  { url: "contact", title: "Contact" },
-];
-
-const Navbar = () => {
   return (
-    <div className="navbar bg-base-100 shadow-sm text-2xl">
+    <nav className="sticky top-0 z-40   text-white shadow-lg">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+        
       
-      <div className="navbar-start">
-       
-<Link href="/" className=""> <Image 
-  src="/download (1).png" 
-  width={32} 
-  height={32} 
-  alt="Example"
-  className="bg-white rounded-full"
-/></Link>
-        <span className="btn btn-ghost text-xl text-white">Naimul.dev</span>
-      </div>
+        <div className="flex items-center gap-3">
+          <span className="text-2xl font-bold tracking-wide">Naimul</span>
+        </div>
 
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          {links.map((link, index) => (
-            <li key={index}>
-              <Link
+      
+        <ul className="hidden lg:flex gap-10">
+          {links.map((link, idx) => (
+            <li key={idx}>
+              <ScrollLink
                 to={link.url}
                 smooth={true}
                 duration={500}
                 offset={-70}
                 spy={true}
-                activeClass="active"
+                activeClass="text-cyan-400 font-semibold"
+                className="cursor-pointer hover:text-cyan-400 transition text-lg"
               >
                 {link.title}
-              </Link>
+              </ScrollLink>
             </li>
           ))}
         </ul>
+
+   
+        <div className="hidden lg:block">
+          <DownloadCVButton />
+        </div>
+
+       
+        <div className="lg:hidden">
+          <button onClick={() => setIsOpen(true)} aria-label="Open Menu">
+            <svg xmlns="http://www.w3.org/2000/svg"
+              className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
       </div>
 
-      <div className="navbar-end">
-        <DownloadCVButton />
-      </div>
-       <div className="dropdown">
-          
-          <ul tabIndex={0} className="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow">
-         
-          </ul>
-        </div> 
-{/*  */}
-<div className="  drawer-end">
-  <input id="my-drawer" type="checkbox" className="drawer-toggle" />
-  <div className="drawer-content">
-    {/* Page content here */}
-<label htmlFor="my-drawer" tabIndex={0} className="btn btn-ghost lg:hidden">
-  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> 
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> 
-  </svg>
-</label>
-</div>
-  <div className="drawer-side">
-    <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
-    <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4">
-      {/* Sidebar content here */}
-         {links.map((link, index) => (
-              <li key={index}>
-                <Link
-                  to={link.url}
-                  smooth={true}
-                  duration={500}
-                  offset={-70}
-                  spy={true}
-                  activeClass="active"
-                >
-                  {link.title}
-                </Link>
-              </li>
-            ))}
-    </ul>
-  </div>
-</div>
-{/*  */}
-
-    </div>
+     
+      {isOpen && (
+        <div className="fixed inset-0 z-50 flex">
+    
+          <div
+            className="flex-1 bg-black bg-opacity-40"
+            onClick={() => setIsOpen(false)}
+          />
+        
+          <div className="bg-gray-900 text-white max-w-[61.8%] w-full p-7 space-y-6 shadow-2xl">
+            <button
+              className="text-gray-400 hover:text-white mb-6"
+              onClick={() => setIsOpen(false)}
+              aria-label="Close Menu"
+            >
+              ✕
+            </button>
+            <ul className="space-y-5">
+              {links.map((link, idx) => (
+                <li key={idx}>
+                  <ScrollLink
+                    to={link.url}
+                    smooth={true}
+                    duration={500}
+                    offset={-70}
+                    spy={true}
+                    activeClass="text-cyan-400 font-semibold"
+                    className="cursor-pointer hover:text-cyan-400 transition text-lg"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.title}
+                  </ScrollLink>
+                </li>
+              ))}
+            </ul>
+            <DownloadCVButton />
+          </div>
+        </div>
+      )}
+    </nav>
   );
-};
-
-export default Navbar;
+}

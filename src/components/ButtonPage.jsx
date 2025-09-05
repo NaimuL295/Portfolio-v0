@@ -1,11 +1,12 @@
 export default function DownloadCVButton() {
   return (
     <a
-      href="/compressed.pdf"
-      download="compressed.pdf"
+      href="/images/compressed.pdf"
+      download="/images/compressed.pdf"
       className="inline-block text-sm px-6 py-3 rounded-lg text-white 
-                 bg-gradient-to-r from-purple-500 to-cyan-500 
-                 hover:shadow-lg hover:shadow-purple-500/50 
+                  
+                 hover:shadow-lg hover:shadow-cyan-400/20
+               
                  transition"
     >
       Resume

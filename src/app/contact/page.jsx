@@ -51,7 +51,7 @@ emailjs.send(
 
   return (
     <>
-    <h1 className="text-4xl font-extrabold  text-center mb-12">Contact Me</h1>
+    <h1 className="text-2xl font-extrabold  text-center mb-12">Contact Me</h1>
    <section  className="    lg:flex    flex-col items-center px-4">
       <div 
    data-aos="fade-up"
@@ -107,7 +107,7 @@ emailjs.send(
 
             <motion.button
               type="submit"
-className="  px-6 py-3 rounded-lg text-white font-semibold bg-gradient-to-r from-purple-500 to-cyan-500 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50 transition"
+className="  px-6 py-3 rounded-lg text-white font-semibold  hover:scale-105 hover:shadow-lg hover:shadow-cyan-400/20 transition"
 disabled={sending}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
